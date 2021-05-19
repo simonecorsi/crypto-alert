@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  bot:
+    container_name: crypto-alert
+    restart: always
+    build: .
+    volumes:
+      - $PWD/.env:/home/node/app/.env
