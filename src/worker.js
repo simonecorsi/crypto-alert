@@ -1,11 +1,11 @@
-const binance = require("../util/binance");
-const log = require("../util/logger");
-const notify = require("../util/notify");
+const binance = require("./util/binance");
+const log = require("./util/logger");
+const notify = require("./util/notify");
 const dayjs = require("dayjs");
 const relativeTime = require("dayjs/plugin/relativeTime");
 dayjs.extend(relativeTime);
 
-module.exports = async ({ pair, ticker }, jobData) => {
+module.exports = async ({ ticker, pair, span, unit }) => {
   log.info(`Running difference for ${ticker}/${pair}`);
 
   if (typeof ticker !== "string" || typeof pair !== "string") {
@@ -13,12 +13,7 @@ module.exports = async ({ pair, ticker }, jobData) => {
     return;
   }
 
-  const result = await binance.difference(
-    ticker,
-    pair,
-    jobData.span,
-    jobData.unit
-  );
+  const result = await binance.difference(ticker, pair, span, unit);
   if (!result) return;
 
   const { data: change, fromNow, current } = result;
@@ -31,7 +26,7 @@ module.exports = async ({ pair, ticker }, jobData) => {
 
   const message = `${emoji} *${ticker}/${pair} ${change}%*
 💸 Price _${current}_
-⏱ _${fromNow}_`;
+⏱  Since _${fromNow}_`;
 
   log.info(message);
   notify(message);

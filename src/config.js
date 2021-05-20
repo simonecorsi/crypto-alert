@@ -15,87 +15,42 @@ const schema = {
       type: "string",
       default: "console",
     },
+    PRICE_PAIRS: {
+      type: "string",
+      default: "BTC/USDT",
+    },
   },
 };
 
-const spans = [
+const config = envSchema({ schema });
+
+config.SCHEDULES = [
   {
-    name: "difference",
-    schedule: "00 */15 * * * *",
-    span: 15,
-    unit: "m",
+    interval: [15, "m"],
+    cron: "15-45/15 * * * *",
   },
   {
-    name: "difference",
-    schedule: "00 00 */1 * * *",
-    span: 1,
-    unit: "h",
+    interval: [1, "h"],
+    cron: "00 00 */1 * * *",
   },
   {
-    name: "difference",
-    schedule: "00 00 */4 * * *",
-    span: 4,
-    unit: "h",
+    interval: [4, "h"],
+    cron: "00 00 */4 * * *",
   },
   {
-    name: "difference",
-    schedule: "00 00 */24 * * *",
-    span: 24,
-    unit: "h",
+    interval: [24, "h"],
+    cron: "00 00 9,21 * * *",
   },
 ];
 
-const tokens =
-  process.env.NODE_ENV === "production"
-    ? [
-        {
-          id: "bitcoin",
-          ticker: "BTC",
-          pair: "USDT",
-          jobs: spans,
-        },
-        {
-          id: "ethereum",
-          ticker: "ETH",
-          pair: "USDT",
-          jobs: spans,
-        },
-        {
-          id: "cardano",
-          ticker: "ADA",
-          pair: "USDT",
-          jobs: spans,
-        },
-        {
-          id: "Dogecoin",
-          ticker: "DOGE",
-          pair: "USDT",
-          jobs: spans,
-        },
-        {
-          id: "Shiba",
-          ticker: "SHIB",
-          pair: "USDT",
-          jobs: spans,
-        },
-      ]
-    : [
-        {
-          id: "bitcoin",
-          ticker: "BTC",
-          pair: "USDT",
-          jobs: [
-            {
-              name: "difference",
-              schedule: "00 */1 * * * *",
-              span: 1,
-              unit: "m",
-            },
-          ],
-        },
-      ];
+if (process.env.NODE_ENV !== "production") {
+  config.PRICE_PAIRS = "BTC/USDT";
+  config.SCHEDULES = [{ interval: [1, "m"], cron: "00 */1 * * * *" }];
+}
 
-module.exports = {
-  ...envSchema({ schema }),
-  tokens,
-};
+config.PRICE_PAIRS = config.PRICE_PAIRS.split(",").map((val) => {
+  const [ticker, pair] = val.split("/");
+  return { ticker, pair };
+});
+
+module.exports = config;
