@@ -21,7 +21,7 @@ module.exports = async ({ pair, ticker }, jobData) => {
   );
   if (!result) return;
 
-  const { data: change, fromNow, previous, current } = result;
+  const { data: change, fromNow, current } = result;
 
   if (typeof change !== "number" && change === 0) return;
 
@@ -29,8 +29,8 @@ module.exports = async ({ pair, ticker }, jobData) => {
   if (parseFloat(change, 10) > 0) emoji = "📈";
   if (parseFloat(change, 10) < 0) emoji = "📉";
 
-  const message = `${emoji} ${ticker}/${pair} *${change}%*
-💸 Price *${current}* was *${previous}*
+  const message = `${emoji} *${ticker}/${pair} ${change}%*
+💸 Price _${current}_
 ⏱ _${fromNow}_`;
 
   log.info(message);
