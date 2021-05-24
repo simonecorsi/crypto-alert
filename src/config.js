@@ -27,7 +27,7 @@ const config = envSchema({ schema });
 config.SCHEDULES = [
   {
     interval: [15, "m"],
-    cron: "15-45/15 * * * *",
+    cron: "00 15-45/15 * * * *",
   },
   {
     interval: [1, "h"],

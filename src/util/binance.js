@@ -18,7 +18,7 @@ const Api = {
 
   async difference(ticker = "btc", pair = "usd", interval = 15, unit = "m") {
     try {
-      const from = dayjs().subtract(interval, "m");
+      const from = dayjs().subtract(interval, unit);
       const query = {
         symbol: `${ticker.toUpperCase()}${pair.toUpperCase()}`,
         interval: `${interval}${unit[0]}`,
