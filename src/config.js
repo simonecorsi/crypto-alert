@@ -35,11 +35,11 @@ config.SCHEDULES = [
   },
   {
     interval: [4, "h"],
-    cron: "00 00 */4 * * *",
+    cron: "15 00 */4 * * *",
   },
   {
     interval: [24, "h"],
-    cron: "00 00 9,21 * * *",
+    cron: "45 00 9,21 * * *",
   },
 ];
 
