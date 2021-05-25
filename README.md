@@ -17,6 +17,12 @@ mv .env.example .env
 # Modify .env accordingly
 ```
 
+### Run with node
+
+```js
+NODE_ENV=production node src/index.js
+```
+
 ### Run with Node
 
 ```sh
