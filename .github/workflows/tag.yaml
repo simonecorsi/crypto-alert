@@ -2,7 +2,7 @@ name: tag-version
 
 on:
   push:
-    branches: main
+    branches: master
 
 jobs:
   version:
