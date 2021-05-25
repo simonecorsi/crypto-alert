@@ -27,14 +27,6 @@ jobs:
           git-message: "chore(release): {version} [skip ci]"
           preset: ""
 
-      - name: send custom message with args
-        uses: appleboy/telegram-action@master
-        if: ${{ secrets.TELEGRAM_TOKEN && secrets.TELEGRAM_TOKEN }}
-        with:
-          to: ${{ secrets.TELEGRAM_TO }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
-          args: ${{ github.repository }} tagged ${{ steps.changelog.outputs.tag }}
-
       - name: Create github Release
         uses: actions/create-release@v1
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
