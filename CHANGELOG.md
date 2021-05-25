@@ -1,23 +1,12 @@
-## <small>1.3.23 (2021-04-08)</small>
+## <small>1.0.1 (2021-05-25)</small>
 
-- build(deps): bump ini from 1.3.5 to 1.3.8 ([71f9727](https://github.com/simonecorsi/crypto-alert/commit/71f9727))
+* ci: readded workflow for publishing ([9199aa4](https://github.com/simonecorsi/crypto-alert/commit/9199aa4))
+* chore: init ([cb6a00c](https://github.com/simonecorsi/crypto-alert/commit/cb6a00c))
+* chore: splitted file ([511c8d7](https://github.com/simonecorsi/crypto-alert/commit/511c8d7))
+* fix: missing argument unit ([c033530](https://github.com/simonecorsi/crypto-alert/commit/c033530))
+* feat: implemented bot with binance api ([5b8e123](https://github.com/simonecorsi/crypto-alert/commit/5b8e123))
+* feat: notify message ([2bbab61](https://github.com/simonecorsi/crypto-alert/commit/2bbab61))
+* feat: worker and scheduler ([48515d9](https://github.com/simonecorsi/crypto-alert/commit/48515d9))
 
-## <small>1.3.22 (2021-04-08)</small>
 
-- chore(release): 1.3.22 ([f1b4fb4](https://github.com/simonecorsi/crypto-alert/commit/f1b4fb4))
-- ci(gh-publish): removed unused action ([44cc50d](https://github.com/simonecorsi/crypto-alert/commit/44cc50d))
 
-## <small>1.3.21 (2021-04-08)</small>
-
-- chore(release): 1.3.21 ([9036331](https://github.com/simonecorsi/crypto-alert/commit/9036331))
-- build(deps): bump y18n from 4.0.0 to 4.0.1 ([0cd17ed](https://github.com/simonecorsi/crypto-alert/commit/0cd17ed))
-
-## <small>1.3.20 (2020-07-14)</small>
-
-- chore(release): 1.3.20 ([087c464](https://github.com/simonecorsi/crypto-alert/commit/087c464))
-- build(deps-dev): bump standard-version from 7.1.0 to 8.0.1 ([d1a11fe](https://github.com/simonecorsi/crypto-alert/commit/d1a11fe))
-
-## <small>1.3.19 (2020-06-23)</small>
-
-- chore(release): 1.3.19 ([94f34a1](https://github.com/simonecorsi/crypto-alert/commit/94f34a1))
-- ci: fixed duplicated job ([6612eea](https://github.com/simonecorsi/crypto-alert/commit/6612eea))
