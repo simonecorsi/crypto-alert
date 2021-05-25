@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 ## <small>1.0.1 (2021-05-25)</small>
 
 - ci: readded workflow for publishing ([9199aa4](https://github.com/simonecorsi/crypto-alert/commit/9199aa4))
@@ -9,7 +7,3 @@
 - feat: implemented bot with binance api ([5b8e123](https://github.com/simonecorsi/crypto-alert/commit/5b8e123))
 - feat: notify message ([2bbab61](https://github.com/simonecorsi/crypto-alert/commit/2bbab61))
 - feat: worker and scheduler ([48515d9](https://github.com/simonecorsi/crypto-alert/commit/48515d9))
-
-=======
-
-> > > > > > > chore: removed changelog
