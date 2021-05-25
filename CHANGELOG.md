@@ -1,6 +1,13 @@
+## <small>1.0.4 (2021-05-25)</small>
+
+* chore: updated doc ([41bcaea](https://github.com/simonecorsi/crypto-alert/commit/41bcaea))
+
+
+
 ## <small>1.0.3 (2021-05-25)</small>
 
 * chore: added doc ([a81e3dd](https://github.com/simonecorsi/crypto-alert/commit/a81e3dd))
+* chore(release): v1.0.3 [skip ci] ([6ed8fe3](https://github.com/simonecorsi/crypto-alert/commit/6ed8fe3))
 
 
 
