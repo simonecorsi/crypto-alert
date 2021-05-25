@@ -45,8 +45,8 @@ Each schedule config object has an `interval` which is the time interval to chec
 
 | variable       | default    | description                                                           |
 | -------------- | ---------- | --------------------------------------------------------------------- |
-| `TG_BOT_TOKEN` |            | C1                                                                    |
-| `TG_CHAT_ID`   |            | C2                                                                    |
+| `TG_BOT_TOKEN` |            | [creating-a-new-bot](https://core.telegram.org/bots#creating-a-new-bot)                                                                   |
+| `TG_CHAT_ID`   |            |                                                                     |
 | `NOTIFIER`     | `console`  | Can be `console` or `telegram`                                        |
 | `PRICE_PAIRS`  | `BTC/USDT` | Price pair divided by comma as seen on binace, eg: `BTC/USDT,ETHUSDT` |
 
