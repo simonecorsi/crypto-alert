@@ -12,6 +12,12 @@ mv .env.example .env
 node src/index.js
 ```
 
+### Run with docker
+
+```sh
+docker-compose up -d
+```
+
 ## Configuration
 
 Configuration can be found in `src/config`, default scheduled checks are every 15m, 1h, 4h and 24h.
