@@ -1,6 +1,6 @@
 {
   "name": "crypto-alert",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Generates flags for unix command from a key/value object",
   "main": "./src/index.js",
   "scripts": {

@@ -1,5 +1,14 @@
+## <small>1.0.6 (2021-05-27)</small>
+
+* chore: config ([810936d](https://github.com/simonecorsi/crypto-alert/commit/810936d))
+* chore(husky): updated to 6 ([b011059](https://github.com/simonecorsi/crypto-alert/commit/b011059))
+* ci: added more logger to debug missing 4h events ([4a32753](https://github.com/simonecorsi/crypto-alert/commit/4a32753))
+
+
+
 ## <small>1.0.5 (2021-05-25)</small>
 
+* chore(release): v1.0.5 [skip ci] ([f813ac6](https://github.com/simonecorsi/crypto-alert/commit/f813ac6))
 * docs: readme ([edc88e5](https://github.com/simonecorsi/crypto-alert/commit/edc88e5))
 
 
